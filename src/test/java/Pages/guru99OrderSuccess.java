@@ -15,7 +15,9 @@ public class guru99OrderSuccess extends BrowserUtils {
     @FindBy(xpath = "//h2[.='Payment successfull!']")
     private WebElement verificationText;
 
-    public void verifyText(String expectedMessage){
+    public void verifyText(String expectedMessage) {
 
+        Assert.assertEquals(verificationText.getText(), expectedMessage);
     }
+
 }

@@ -46,7 +46,6 @@ public class guru99Payment extends BrowserUtils {
         cardNumberInput.sendKeys(cvvCode);
         staticWait(1);
     }
-    // burada payment eksik kaldi
 
     public void clickPayButton() {
         clickWithWait(payButton);
