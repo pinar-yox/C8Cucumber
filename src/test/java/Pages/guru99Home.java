@@ -8,9 +8,9 @@ import utilities.Driver;
 
 public class guru99Home extends BrowserUtils {
     // Constructor to load page WebElements onto the driver
-    public guru99Home(){
-        PageFactory.initElements(Driver.getDriver(),this);
-        //this = current driver instance
+    public guru99Home() {
+        PageFactory.initElements(Driver.getDriver(), this);
+        // this = current driver instance
     }
 
     @FindBy(xpath = "//select[@name='quantity']")
@@ -19,12 +19,13 @@ public class guru99Home extends BrowserUtils {
     @FindBy(xpath = "//input[@type='submit']")
     private WebElement buyNowButton;
 
-    //methods to perform relevant WebElement actions
-    public void selectQuantity(String quantity){
-        selectFromDropdown(quantityDropdown,quantity);
+    // methods to perform relevant WebElement actions
+    public void selectQuantity(String quantity) {
+        selectFromDropdown(quantityDropdown, quantity);
     }
 
-    public void clickBuyNow(){
+    public void clickBuyNow() {
         clickWithWait(buyNowButton);
     }
+
 }

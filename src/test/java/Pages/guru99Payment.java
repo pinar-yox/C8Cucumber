@@ -7,43 +7,40 @@ import utilities.BrowserUtils;
 import utilities.Driver;
 
 public class guru99Payment extends BrowserUtils {
-    public guru99Payment(){
-        PageFactory.initElements(Driver.getDriver(),this);
-        //this = current driver instance
+    public guru99Payment() {
+        PageFactory.initElements(Driver.getDriver(), this);
     }
-
-@FindBy(id="card_mnuber")
+    @FindBy(id = "card_nmuber")
     private WebElement cardNumberInput;
 
-    @FindBy(id="month")
+    @FindBy(id = "month")
     private WebElement monthDropdown;
 
-    @FindBy(id="year")
+    @FindBy(id = "year")
     private WebElement yearDropdown;
 
-    @FindBy(id="cvv_code")
+    @FindBy(id = "cvv_code")
     private WebElement cvvCodeInput;
 
-    @FindBy(xpath ="//input[@name='submit']")
+    @FindBy(xpath = "//input[@name='submit']")
     private WebElement payButton;
 
-    //setters to handle input("set" values)
-
-    public void setCardNumberInput(String cardNumber){
+    // setters to handle input("set" values)
+    public void setCardNumberInput(String cardNumber) {
         cardNumberInput.sendKeys(cardNumber);
         staticWait(1);
     }
 
-    public void setMonthDropdown (String month){
+    public void setMonthDropdown(String month) {
         selectFromDropdown(monthDropdown, month);
     }
 
-    public void setYearDropdown(String year){
-        selectFromDropdown(yearDropdown,year);
+    public void setYearDropdown(String year) {
+        selectFromDropdown(yearDropdown, year);
     }
 
-    public void setCvvCodeInput(String cvvCode){
-        cardNumberInput.sendKeys(cvvCode);
+    public void setCvvCodeInput(String cvvCode) {
+        cvvCodeInput.sendKeys(cvvCode);
         staticWait(1);
     }
 
